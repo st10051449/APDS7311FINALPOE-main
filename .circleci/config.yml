@@ -3,14 +3,14 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/node:18
+      - image: cimg/node:18  # Use the official Node.js 18 image
     steps:
       - checkout
       - run:
           name: Install dependencies and build project
           command: |
-            curl -sSL "https://nodejs.org/dist/v18.0.0/node-v18.0.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v18.0.0-linux-x64/bin/node
-            curl -sSL https://www.npmjs.com/install.sh | sudo bash
+            npm install
+            npm run build
       - sonarcloud/scan
 
 orbs:
