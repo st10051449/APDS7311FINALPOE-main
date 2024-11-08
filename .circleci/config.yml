@@ -1,13 +1,22 @@
+orbs:
+  sonarcloud: sonarsource/sonarcloud@2.0.0
+
 jobs:
   build:
     docker:
-      - image: cimg/node:18
+      - image: cimg/node:lts
     steps:
       - checkout
       - run:
           name: Install dependencies and build project
           command: |
-            cd frontend  # Navigate to the directory containing package.json
-            npm install   # Install dependencies
-            npm run build # Build the project
-      - sonarcloud/scan
+            npm install
+            npm run build
+      - sonarcloud/scan:
+          organization: your-organization
+          projectKey: your-project-key
+
+workflows:
+  main:
+    jobs:
+      - build
