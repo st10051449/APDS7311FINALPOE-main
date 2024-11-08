@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Install dependencies and build project
           command: |
-            cd backend  # Navigate to the correct directory
+            cd Backend  # Navigate to the correct directory
             npm install
             npm run build
       - sonarcloud/scan
