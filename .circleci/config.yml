@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/node:18  # Use the official Node.js 18 image
+      - image: cimg/node:lts
     steps:
       - checkout
       - run:
