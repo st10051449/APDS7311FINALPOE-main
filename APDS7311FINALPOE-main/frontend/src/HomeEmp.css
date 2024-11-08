@@ -1,0 +1,146 @@
+/* Code adapted from https://uiverse.io/hossainsakib07/moody-newt-47 */
+/* green container */
+.anim-container {
+    width: 254px;
+    height: 190px;
+    background: transparent;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.438);
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .anim-card {
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #212121;
+    background-color: rgba(265, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    transition: all ease 0.3s;
+  }
+  
+  .anim-container::after,
+  .anim-container::before {
+    width: 100px;
+    height: 100px;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transition: 0.5s linear;
+  }
+  
+  .anim-container::after {
+    top: -20px;
+    left: -20px;
+    background-color: rgba(9, 170, 116, 0.4);
+    animation: animFirst 5s linear infinite;
+  }
+  
+  .anim-container::before {
+    background-color: rgb(9, 170, 116, 0.3);
+    top: 70%;
+    left: 70%;
+    animation: animSecond 5s linear infinite;
+    animation-delay: 3s;
+  }
+  
+  .anim-container:hover {
+    box-shadow: 0px 0px 10px rgba(9, 170, 116, 0.432);
+  }
+  
+  .anim-container:hover::after {
+    left: 190px;
+    transform: scale(1.2);
+  }
+  
+  .anim-container:hover::before {
+    left: -10px;
+    transform: scale(1.2);
+  }
+
+  /* blue container */
+  .anim-container-blue {
+    width: 254px;
+    height: 190px;
+    background: transparent;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.438);
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .anim-card-blue {
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #212121;
+    background-color: rgba(265, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    transition: all ease 0.3s;
+  }
+  
+  .anim-container-blue::after,
+  .anim-container-blue::before {
+    width: 100px;
+    height: 100px;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transition: 0.5s linear;
+  }
+  
+  .anim-container-blue::after {
+    top: -20px;
+    left: -20px;
+    background-color: rgba(7, 121, 197, 0.4);
+    animation: animFirst 5s linear infinite;
+  }
+  
+  .anim-container-blue::before {
+    background-color: rgb(7, 121, 197, 0.3);
+    top: 70%;
+    left: 70%;
+    animation: animSecond 5s linear infinite;
+    animation-delay: 3s;
+  }
+  
+  .anim-container-blue:hover {
+    box-shadow: 0px 0px 10px rgba(7, 121, 197, 0.432);
+  }
+  
+  .anim-container-blue:hover::after {
+    left: 190px;
+    transform: scale(1.2);
+  }
+  
+  .anim-container-blue:hover::before {
+    left: -10px;
+    transform: scale(1.2);
+  }
+
+  .heading {
+    font-size: 60px;
+  }

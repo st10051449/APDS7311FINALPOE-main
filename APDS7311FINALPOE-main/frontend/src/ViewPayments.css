@@ -1,0 +1,9 @@
+.soft-rounded-card {
+    border: 1px solid #2f39c4;
+    text-align: left;
+    border-radius: 15px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px;
+}

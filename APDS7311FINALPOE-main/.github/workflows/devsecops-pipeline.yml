@@ -1,0 +1,42 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+           node-version: '18'  
+
+      # Navigate to the Backend folder before installing dependencies and running commands
+      - name: Navigate to Backend folder
+        run: cd Backend
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./Backend
+
+      - name: Run Linting
+        run: npm run lint
+        working-directory: ./Backend
+
+      - name: Run Tests
+        run: npm test
+        working-directory: ./Backend
+
+      - name: Security Scan
+        run: npm audit --audit-level=high
+        working-directory: ./Backend
