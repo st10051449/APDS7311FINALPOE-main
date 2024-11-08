@@ -3,12 +3,13 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/node:lts  # Use the official Node.js LTS image
+      - image: cimg/node:lts 
     steps:
       - checkout
       - run:
           name: Install dependencies and build project
           command: |
+            cd backend  # Navigate to the correct directory
             npm install
             npm run build
       - sonarcloud/scan
@@ -21,4 +22,3 @@ workflows:
     jobs:
       - build:
           context: SonarCloud
-
